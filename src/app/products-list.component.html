@@ -1,0 +1,11 @@
+<section class="hero-section">
+  <h2 class="hero-text"></h2>
+</section>
+<article class="product-list">
+  <app-products-list-card
+    *ngFor="let product of productsService.products; let i = index"
+    [index]="i"
+    [product]="product"
+  >
+  </app-products-list-card>
+</article>

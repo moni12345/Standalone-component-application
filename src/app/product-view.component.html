@@ -1,0 +1,14 @@
+<article class="details-panel" *ngIf="product$ | async as product">
+  <img
+    class="main-img"
+    src="{{ product.photoUrl }}"
+    alt="Photo of {{ product.name }}"
+  />
+  <article>
+    <h1 class="main-text">{{ product.name }}</h1>
+    <h2>
+      Brand Name is <span class="emphasize">{{ product.brandName }}</span>
+    </h2>
+    <p>{{ product.longDescription }}</p>
+  </article>
+</article>

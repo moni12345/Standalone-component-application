@@ -1,0 +1,19 @@
+<article class="product-card">
+  <img
+    class="product-img"
+    src="{{ product.photoUrl }}"
+    alt="Photo of {{ product.name }}"
+  />
+  <p class="product-headline">
+    Watch Name <span class="product-name">{{ product.name }}</span>
+  </p>
+  <p class="product-description">
+    <span class="product-name">{{ product.brandName }}</span> details <br />
+    {{ product.name }}:
+    {{ product.description }}
+  </p>
+  <p class="product-learn-more">
+    <a href="/details/{{ index }}">Learn More</a>
+  </p>
+  <article></article>
+</article>
