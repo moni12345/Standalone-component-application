@@ -6,7 +6,8 @@ import { ProductViewComponent } from './product-view.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'list' },
   { path: 'list', component: ProductsListComponent },
-  { path: 'details/:index', component: ProductViewComponent },
+  // Lazy loading on a component level
+  { path: 'details/:index', loadComponent: () => import('./product-view.component').then(m => m.ProductViewComponent) },
 ];
 
 @NgModule({
